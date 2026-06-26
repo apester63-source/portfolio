@@ -271,24 +271,15 @@ function App() {
             </div>
 
             <div className="animate-rise-delay">
-              <div className="relative rounded-lg border border-line bg-white p-4 shadow-soft">
-                <div className="grid gap-4 sm:grid-cols-[1fr_0.45fr]">
-                  <img
-                    className="aspect-[4/3] w-full rounded-md bg-mist object-cover"
-                    src={`${basePath}resume-systems-hero.svg`}
-                    alt="Technical illustration showing vibration analysis, CAD, Python data, and mechanical testing"
-                  />
-                  <div className="flex flex-col gap-4">
-                    <img
-                      className="aspect-square w-full rounded-md border border-line bg-mist object-cover"
-                      src={`${basePath}media/headshot.jpg`}
-                      alt="Professional headshot of April Vissers"
-                    />
-                    <div className="rounded-md bg-ink p-4 text-white">
-                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber">April Vissers</p>
-                      <p className="mt-2 text-sm leading-6 text-white/75">Mechanical engineering, vibration analysis, manufacturing, and robotics.</p>
-                    </div>
-                  </div>
+              <div className="relative overflow-hidden rounded-lg border border-line bg-white p-4 shadow-soft">
+                <img
+                  className="aspect-[4/5] w-full rounded-md bg-mist object-cover object-[50%_28%]"
+                  src={`${basePath}media/headshot.jpg`}
+                  alt="Professional headshot of April Vissers"
+                />
+                <div className="mt-4 rounded-md bg-ink p-4 text-white">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber">April Vissers</p>
+                  <p className="mt-2 text-sm leading-6 text-white/75">Mechanical engineering. Vibration analysis. Hardware builds.</p>
                 </div>
                 <div className="mt-4 grid grid-cols-3 gap-3 text-center text-xs font-semibold text-steel">
                   <span className="rounded-md bg-mist px-2 py-3">CAD</span>

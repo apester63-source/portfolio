@@ -137,8 +137,7 @@ h1 {
 }
 
 .media-card img,
-.media-card video,
-.audio-panel {
+.media-card video {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -147,37 +146,10 @@ h1 {
   border-bottom: 1px solid #f3b9d8;
 }
 
-.audio-panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 22px;
-  padding: 24px;
-  background: #241022;
-  color: #00c2d1;
-}
-
-.audio-panel span {
-  font-weight: 900;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.audio-panel audio {
-  width: 100%;
-}
-
 .media-card h2 {
-  margin: 22px 22px 0;
+  margin: 22px;
   color: #241022;
   font-size: 1.25rem;
-}
-
-.media-card p {
-  margin: 10px 22px 24px;
-  color: #725069;
-  font-size: 0.94rem;
-  line-height: 1.65;
 }
 
 @media (max-width: 900px) {
