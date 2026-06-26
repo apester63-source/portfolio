@@ -10,8 +10,8 @@ import {
   Mail,
   MapPin,
   Menu,
-  Microscope,
   MoveRight,
+  Phone,
   ShieldCheck,
   Wrench,
   X,
@@ -21,50 +21,55 @@ import './styles.css'
 const navItems = ['Home', 'About', 'Projects', 'Resume', 'Contact']
 
 const capabilities = [
-  { icon: Bot, label: 'Robotics integration', detail: 'Mobile platforms, actuators, sensors, and test rigs.' },
-  { icon: BrainCircuit, label: 'Autonomy systems', detail: 'Controls, perception pipelines, and field validation.' },
-  { icon: Microscope, label: 'Medical device rigor', detail: 'Verification-first development and clear documentation.' },
+  { icon: Bot, label: 'Robotics and controls', detail: 'FANUC automation, PLC logic, ESP32 controls, CAN bus, and I2C integration.' },
+  { icon: BrainCircuit, label: 'Signal and vibration analysis', detail: 'Python tools for automated signal processing, vibration analysis, and large-scale engineering data.' },
+  { icon: Wrench, label: 'Manufacturing improvement', detail: 'Production troubleshooting, fixture design, workflow optimization, and technical documentation.' },
 ]
 
 const projects = [
   {
-    title: 'Autonomous Indoor Navigation Platform',
-    area: 'Robotics',
+    title: 'Automated Robotics Construction Cell',
+    area: 'Robotics Automation',
     summary:
-      'Designed a modular navigation stack for an indoor service robot, pairing sensor fusion with repeatable bench and hallway tests.',
-    metrics: ['42% lower localization drift', 'ROS 2', 'LiDAR + IMU'],
+      'Programmed robotic automation sequences for autonomous LEGO sorting and assembly, designed custom fixtures and end-of-arm tooling, and integrated a 6-axis FANUC LR Mate cell with Allen-Bradley PLCs.',
+    metrics: ['FANUC LR Mate', 'RSLogix 5000', 'Custom EOAT'],
   },
   {
-    title: 'Cardiac Tooling Motion Test Fixture',
-    area: 'MedTech',
+    title: 'Autonomous Collection Robot',
+    area: 'Mobile Robotics',
     summary:
-      'Built a compact electromechanical fixture to characterize catheter-like tool motion across force, repeatability, and duty cycles.',
-    metrics: ['0.2 mm repeatability', 'Python DAQ', 'Design controls'],
+      'Designed, built, and tested an autonomous mobile robot in a three-person engineering team, developing ESP32 control software and integrating sensors and actuators over CAN bus and I2C.',
+    metrics: ['1st place', 'ESP32', 'SolidWorks'],
   },
   {
-    title: 'Human-Safe Manipulator Prototype',
-    area: 'AI Robotics',
+    title: 'Vertical Axis Wind Turbine Prototype',
+    area: 'Mechanical Design',
     summary:
-      'Prototyped a perception-assisted manipulator workflow focused on safe interaction, clear fault states, and rapid iteration.',
-    metrics: ['Force limits', 'CV pipeline', 'Risk analysis'],
+      'Developed a novel vertical axis wind turbine concept, completed efficiency and load calculations, created detailed SolidWorks models, and fabricated proof-of-concept parts with 3D printing.',
+    metrics: ['Load analysis', 'CAD modeling', 'Prototype testing'],
   },
 ]
 
 const resumeItems = [
   {
-    period: '2024 - Present',
-    role: 'Robotics Systems Engineer',
-    detail: 'Own subsystem architecture, prototype builds, design reviews, validation plans, and cross-functional engineering handoffs.',
+    period: '2024 - 2026',
+    role: 'Acoustics and Vibration Engineer, Aercoustics Engineering',
+    detail: 'Delivered acoustics and vibration projects across residential, commercial, institutional, and transit developments. Built Python tools for signal processing and vibration analysis, prepared technical reports and calculations, and developed mitigation strategies for sensitive equipment installations including an MRI facility with vibration levels exceeding criteria by 30x.',
   },
   {
-    period: '2022 - 2024',
-    role: 'Mechanical / Mechatronics Engineer',
-    detail: 'Developed assemblies, test fixtures, manufacturing drawings, tolerance studies, and instrumentation workflows.',
+    period: '2023 - 2024',
+    role: 'Production Engineering Intern, Paradigm Electronics',
+    detail: 'Supported loudspeaker manufacturing process development, product testing, root-cause investigations, tooling improvements, and lean manufacturing initiatives. Redesigned a baffle painting process, increasing productivity by over 40% and reducing annual operating costs by approximately $9,000.',
+  },
+  {
+    period: '2019 - 2024',
+    role: 'Bachelor of Engineering Science, Western University',
+    detail: "Mechanical and Materials Engineering graduate on the Dean's Honour List from 2019 to 2024 and recipient of the Western Continuing Admission Scholarship.",
   },
   {
     period: 'Core Toolkit',
     role: 'Engineering Stack',
-    detail: 'SolidWorks, ROS 2, Python, MATLAB, C++, sensor integration, DFM, FMEA, verification testing, and technical writing.',
+    detail: 'SolidWorks, Onshape, Rhinoceros 3D, Python, Java, RSLogix 5000, PLC programming, signal processing, vibration analysis, microcontroller programming, prototype development, root-cause analysis, and manufacturing process improvement.',
   },
 ]
 
@@ -123,14 +128,14 @@ function App() {
           <div className="mx-auto grid max-w-7xl gap-12 px-5 pb-20 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-24">
             <div className="animate-rise">
               <p className="mb-5 inline-flex items-center gap-2 rounded-lg border border-line bg-white px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-signal">
-                Robotics / Mechatronics / Product Engineering
+                Mechanical Engineering / Robotics / Vibration Analysis
               </p>
               <h1 className="max-w-4xl text-5xl font-semibold leading-[1.03] tracking-normal text-ink sm:text-6xl lg:text-7xl">
-                Engineering reliable robots from concept to field-ready systems.
+                Mechanical engineer building practical systems from analysis to tested hardware.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-steel">
-                A clean technical portfolio for roles at robotics and engineering companies building autonomous mobility,
-                medical devices, and human-centered automation.
+                I bring field-tested acoustics and vibration experience, manufacturing engineering judgment, and hands-on
+                robotics project work to teams building reliable automation, mobility, and advanced hardware systems.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a className="inline-flex items-center justify-center gap-2 rounded-lg bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-signal" href="#projects">
@@ -160,8 +165,8 @@ function App() {
                 </div>
                 <div className="mt-4 grid grid-cols-3 gap-3 text-center text-xs font-semibold text-steel">
                   <span className="rounded-md bg-mist px-2 py-3">CAD</span>
-                  <span className="rounded-md bg-mist px-2 py-3">Controls</span>
-                  <span className="rounded-md bg-mist px-2 py-3">Validation</span>
+                  <span className="rounded-md bg-mist px-2 py-3">Python</span>
+                  <span className="rounded-md bg-mist px-2 py-3">Testing</span>
                 </div>
               </div>
             </div>
@@ -173,14 +178,14 @@ function App() {
             <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
               <div>
                 <p className="eyebrow">About</p>
-                <h2 className="section-title">Engineer with a bias for prototypes that teach quickly.</h2>
+                <h2 className="section-title">Engineer with a strong blend of analysis, prototyping, and real-world testing.</h2>
               </div>
               <div className="space-y-6 text-base leading-8 text-steel">
                 <p>
-                  I build across mechanical design, embedded-adjacent systems, controls, and verification. My strongest work sits where hardware needs to be made understandable: clear requirements, disciplined tests, and practical design decisions under uncertainty.
+                  I am a mechanical engineering graduate from Western University with professional experience in acoustics and vibration engineering and production engineering. My work has included field investigations, data acquisition, engineering calculations, Python-based analysis tools, 3D simulation models, manufacturing troubleshooting, and technical reporting for multidisciplinary teams.
                 </p>
                 <p>
-                  For teams like A&K Robotics, Kardium, and Sanctuary AI, this portfolio emphasizes the qualities that matter in advanced engineering environments: thoughtful systems thinking, rigorous documentation, clean prototypes, and calm collaboration across disciplines.
+                  My academic project experience adds a robotics and controls foundation: FANUC automation, Allen-Bradley PLC integration, autonomous mobile robot design, embedded controls, CAD, 3D printing, laser cutting, and iterative prototype testing. I am interested in applying that mix of practical hardware, analysis, and documentation to robotics and engineering teams like A&K Robotics, Kardium, and Sanctuary AI.
                 </p>
                 <div className="grid gap-4 sm:grid-cols-3">
                   {capabilities.map(({ icon: Icon, label, detail }) => (
@@ -201,7 +206,7 @@ function App() {
             <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
               <div>
                 <p className="eyebrow">Projects</p>
-                <h2 className="section-title max-w-3xl">Selected systems work for robotics, MedTech, and intelligent automation.</h2>
+                <h2 className="section-title max-w-3xl">Selected robotics, controls, and mechanical design projects.</h2>
               </div>
               <a className="inline-flex items-center gap-2 text-sm font-semibold text-signal transition hover:text-ink" href="#contact">
                 Discuss a project
@@ -235,9 +240,9 @@ function App() {
             <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
               <div>
                 <p className="eyebrow">Resume</p>
-                <h2 className="section-title">A concise profile for engineering hiring teams.</h2>
+                <h2 className="section-title">Experience across vibration analysis, manufacturing, and robotics projects.</h2>
                 <p className="mt-5 text-base leading-8 text-steel">
-                  Replace this content with your exact roles, dates, and project outcomes when you are ready. The structure is tuned for quick recruiter and engineering-manager scanning.
+                  A focused snapshot of roles, education, and technical strengths for engineering hiring teams reviewing mechanical, robotics, automation, or product development candidates.
                 </p>
               </div>
               <div className="space-y-4">
@@ -254,12 +259,12 @@ function App() {
                   <div className="rounded-lg bg-ink p-6 text-white">
                     <Wrench className="mb-5 text-amber" size={24} aria-hidden="true" />
                     <h3 className="text-lg font-semibold">Hands-on build fluency</h3>
-                    <p className="mt-3 text-sm leading-7 text-white/75">Comfortable moving from CAD and calculations to prototypes, lab tests, and manufacturing feedback.</p>
+                    <p className="mt-3 text-sm leading-7 text-white/75">Comfortable moving from CAD and calculations to prototype fabrication, test setup, troubleshooting, and manufacturing feedback.</p>
                   </div>
                   <div className="rounded-lg border border-line bg-white p-6">
                     <ShieldCheck className="mb-5 text-signal" size={24} aria-hidden="true" />
-                    <h3 className="text-lg font-semibold text-ink">Verification mindset</h3>
-                    <p className="mt-3 text-sm leading-7 text-steel">Clear acceptance criteria, traceable test records, and technical communication that reduces ambiguity.</p>
+                    <h3 className="text-lg font-semibold text-ink">Analysis mindset</h3>
+                    <p className="mt-3 text-sm leading-7 text-steel">Strong signal processing, vibration analysis, engineering data analysis, technical documentation, and root-cause investigation habits.</p>
                   </div>
                 </div>
               </div>
@@ -273,16 +278,20 @@ function App() {
               <div>
                 <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-amber">Contact</p>
                 <h2 className="max-w-3xl text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
-                  Available for robotics, mechatronics, and product engineering conversations.
+                  Available for robotics, mechanical, vibration, and manufacturing engineering conversations.
                 </h2>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-white/72">
-                  Use this section for direct hiring links, project inquiries, or a short note about relocation and work authorization.
+                  Based in Vancouver, BC and interested in engineering roles where practical hardware, thoughtful analysis, and clear technical communication matter.
                 </p>
               </div>
               <div className="rounded-lg border border-white/12 bg-white/7 p-6">
-                <a className="contact-row" href="mailto:april@example.com">
+                <a className="contact-row" href="mailto:vissersapril@gmail.com">
                   <Mail size={20} aria-hidden="true" />
-                  april@example.com
+                  vissersapril@gmail.com
+                </a>
+                <a className="contact-row" href="tel:+17054407473">
+                  <Phone size={20} aria-hidden="true" />
+                  (705) 440-7473
                 </a>
                 <a className="contact-row" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
                   <ExternalLink size={20} aria-hidden="true" />
