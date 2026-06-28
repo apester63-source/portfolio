@@ -24,6 +24,8 @@ const basePath = import.meta.env.BASE_URL
 const resumeUrl = `${basePath}resume.pdf`
 const linkedInUrl = 'https://www.linkedin.com/in/april-vissers-849a56207'
 const projectPath = (id) => `#/projects/${id}`
+const projectImageClass = (project, spacing = '') =>
+  `${spacing}aspect-[4/3] w-full rounded-md ${project.imageFit === 'contain' ? 'bg-mist object-contain p-2' : 'object-cover'}`
 
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -122,6 +124,7 @@ const projects = [
     area: 'Manufacturing Automation',
     image: 'media/project-cobot-buffing-cell.jpg',
     imagePosition: '48% 48%',
+    imageFit: 'contain',
     summary:
       'Collaborative robot workcell implementation for automating a cabinet buffing process in speaker manufacturing.',
     metrics: ['Cobot integration', 'Fixture planning', 'Process validation'],
@@ -246,7 +249,7 @@ function ProjectPage({ project }) {
 
             <div className="rounded-lg border border-line bg-white p-3 shadow-soft">
               <img
-                className="aspect-[4/3] w-full rounded-md object-cover"
+                className={projectImageClass(project)}
                 src={`${import.meta.env.BASE_URL}${project.image}`}
                 alt={`${project.title} technical illustration`}
                 style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined}
@@ -470,7 +473,7 @@ function App() {
                   aria-label={`Read more about ${project.title}`}
                 >
                   <img
-                    className="mb-6 aspect-[4/3] w-full rounded-md object-cover"
+                    className={projectImageClass(project, 'mb-6 ')}
                     src={`${import.meta.env.BASE_URL}${project.image}`}
                     alt={`${project.title} project illustration`}
                     style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined}
